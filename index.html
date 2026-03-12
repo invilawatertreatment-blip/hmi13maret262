@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invila™ Smart Unit - Strategic Dashboard</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <style>
@@ -16,7 +13,7 @@
         .active-tab { background-color: #2563eb !important; color: white !important; border-color: #2563eb !important; box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3); }
         canvas { width: 100% !important; height: 100% !important; }
 
-        /* Konsultasi Gratis - Small Pill Style with SVG Inline */
+        /* Konsultasi Gratis - Small Pill Style */
         .wa-float-pill {
             display: flex !important;
             visibility: visible !important;
@@ -51,7 +48,6 @@
 </head>
 <body class="bg-slate-50 text-slate-900 selection:bg-blue-100">
 
-    <!-- Tombol Konsultasi Gratis - SVG Inline for reliability on GitHub -->
     <a href="https://wa.me/6285219493322?text=Halo%20Invila%2C%20saya%20ingin%20Konsultasi%20Gratis%20mengenai%20skema%20Zero-CAPEX%20untuk%20optimasi%20air%20di%20PT%20CPI%20Salatiga." 
        target="_blank" 
        class="wa-float-pill">
@@ -61,7 +57,6 @@
         <span>Konsultasi Gratis</span>
     </a>
 
-    <!-- Navigasi -->
     <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200 px-4 sm:px-6 py-3 sm:py-4">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0">
             <a href="#" class="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity cursor-pointer">
@@ -81,7 +76,6 @@
 
     <main class="max-w-7xl mx-auto p-4 md:p-8 space-y-20 pb-32">
         
-        <!-- Hero Section - Gambar Modular Dihapus -->
         <section class="pt-10 flex flex-col justify-between gap-8 text-left animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div class="space-y-6">
                 <div class="flex items-center gap-2 text-blue-600 font-bold tracking-widest text-[10px] uppercase">
@@ -98,7 +92,6 @@
             </div>
         </section>
 
-        <!-- Optimasi Finansial -->
         <section id="optimasi" class="space-y-8 text-left">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div class="lg:col-span-2 bg-white rounded-3xl p-8 border border-slate-200 shadow-sm space-y-6">
@@ -124,7 +117,6 @@
             </div>
         </section>
 
-        <!-- Teknologi Section -->
         <section id="teknologi" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start text-left">
             <div class="lg:col-span-4 space-y-4" id="phaseTabs">
                 <div class="flex items-center gap-2 mb-4">
@@ -146,7 +138,6 @@
             </div>
         </section>
 
-        <!-- Populasi Section -->
         <section id="populasi" class="space-y-10 text-left">
             <div class="bg-slate-900 rounded-[2rem] p-6 sm:p-12 text-white relative overflow-hidden shadow-2xl">
                 <div class="relative z-10 space-y-12">
@@ -160,7 +151,6 @@
                                 <p class="text-blue-300 text-sm font-medium opacity-60">Rekam jejak operasional seluruh Indonesia</p>
                             </div>
                         </div>
-                        <!-- Updated button text -->
                         <button onclick="restartAnimations()" class="flex items-center gap-2 bg-slate-800 text-white font-bold px-6 py-3 rounded-xl hover:bg-slate-700 transition-all active:scale-95 text-sm">
                             <i data-lucide="refresh-cw" size="18"></i>
                             Lihat Kembali Pertumbuhan Kapasitas
@@ -195,16 +185,22 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="mt-20 pt-20 pb-16 bg-slate-950 text-center space-y-16 border-t border-slate-900">
-        <div class="space-y-6">
-            <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-lg mx-auto">I</div>
-            <p class="text-slate-400 font-bold uppercase tracking-widest text-[10px]">Engineering by Invila Engineering Systems</p>
-            <p class="text-slate-600 text-[10px] px-8 max-w-2xl mx-auto leading-relaxed italic">Disclaimer: Draf analisis strategis untuk kepentingan internal PT Charoen Pokphand Indonesia.</p>
+    <footer class="mt-20 pt-10 pb-12 bg-slate-950 text-center space-y-8 border-t border-slate-900">
+        <div class="space-y-4">
+            <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-[0_0_20px_rgba(37,99,235,0.5)] mx-auto border border-blue-400/20">
+                <span class="drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">I</span>
+            </div>
+            <div class="space-y-1">
+                <p class="text-blue-400 font-bold uppercase tracking-[0.2em] text-[10px]">Engineering by Invila Engineering Systems</p>
+                <p class="text-slate-500 text-[9px] px-8 max-w-2xl mx-auto leading-relaxed italic opacity-70">
+                    Disclaimer: Draf analisis strategis untuk kepentingan internal PT Charoen Pokphand Indonesia.
+                </p>
+            </div>
         </div>
-        <div class="space-y-8 max-w-7xl mx-auto pt-8 border-t border-slate-900/50 px-4 text-slate-500 uppercase tracking-widest text-[10px] font-bold">
-            Mitra Industri Strategis
-            <div id="logoGrid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-6 mt-6 opacity-40"></div>
+
+        <div class="max-w-6xl mx-auto pt-8 border-t border-slate-900/50 px-4">
+            <p class="text-slate-500 uppercase tracking-widest text-[9px] font-bold mb-6">Mitra Industri Strategis</p>
+            <div id="logoGrid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-4 opacity-90"></div>
         </div>
     </footer>
 
@@ -331,9 +327,11 @@
             `).join('');
 
             const lGrid = document.getElementById('logoGrid');
-            const logoNames = ["Patria", "Wika", "PDAM", "KIW", "Petrokimia", "Cemerlang", "United Tractors"];
+            const logoNames = ["PATRIA", "WIKA", "PDAM", "KIW", "PETROKIMIA", "CEMERLANG", "UNITED TRACTORS"];
             lGrid.innerHTML = logoNames.map(name => `
-                <div class="flex justify-center items-center p-2"><span class="text-[10px] font-bold">${name}</span></div>
+                <div class="flex justify-center items-center p-2">
+                    <span class="text-[10px] font-extrabold text-slate-300 hover:text-white transition-colors tracking-tighter">${name}</span>
+                </div>
             `).join('');
 
             initCharts(); 
